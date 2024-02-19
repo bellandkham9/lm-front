@@ -489,7 +489,7 @@ const page = () => {
                                 </p>
 
                                 <button type="button" className="">
-                                  <img
+                                  <Image
                                     src="/images/Groupe 31.png"
                                     alt=""
                                     width={28}
