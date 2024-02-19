@@ -106,14 +106,14 @@ export default function Page() {
                       onSuccess={(credentialResponse) => {
                         // Rediriger vers le tableau de bord
                          window.location.href = '/dashboard';
-                        try {
+                        /* try {
                           const decoded = jwtDecode(
                             credentialResponse?.credential
                           );
                           console.log(decoded);
                         } catch (error) {
                           console.error("Error decoding JWT:", error);
-                        }
+                        } */
                       }}
                       onError={() => {
                         console.log("Login Failed");

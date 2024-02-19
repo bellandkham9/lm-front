@@ -7,7 +7,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { FcGoogle } from "react-icons/fc";
+
+
 export default function Page() {
   return (
     <>

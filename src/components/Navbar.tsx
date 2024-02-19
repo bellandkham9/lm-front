@@ -46,7 +46,7 @@ const Navbar = async () => {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button className="bg-transparent hover:bg-transparent">
-                  <img src="/images/icons8_settings_48px.png" alt="" />
+                  <Image src="/images/icons8_settings_48px.png" alt="" />
                 </Button>
               </TooltipTrigger>
               <TooltipContent className="bg-orange-400 text-white border-none shadow-xl rounded-xl">
@@ -60,7 +60,7 @@ const Navbar = async () => {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button className="bg-transparent hover:bg-transparent">
-                  <img src="/images/icons8_notification_64px.png" alt="" />
+                  <Image src="/images/icons8_notification_64px.png" alt="" />
                 </Button>
               </TooltipTrigger>
               <TooltipContent className="bg-orange-400 text-white border-none shadow-xl rounded-xl">
@@ -86,7 +86,7 @@ const Navbar = async () => {
         </div>
         <div className="w-16 h-16">
           <Button className="bg-transparent hover:bg-transparent">
-            <img src="/images/icons8_menu_vertical_48px.png" alt="" />
+            <Image src="/images/icons8_menu_vertical_48px.png" alt="" />
           </Button>
         </div>
       </div>
