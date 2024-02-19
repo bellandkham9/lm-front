@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@material-tailwind/react";
 import Link from "next/link";
 import {
   Accordion,
