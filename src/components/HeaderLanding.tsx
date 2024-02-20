@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { LayoutDashboard, UserIcon, UserPlus } from "lucide-react";
+import {UserPlus } from "lucide-react";
 
 
 const route = {
