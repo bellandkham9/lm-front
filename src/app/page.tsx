@@ -1,5 +1,5 @@
 "use client";
-import landPage from "./(landing)/page";
+import landPage from "./(landing)/home/page";
 
 export default landPage
 
