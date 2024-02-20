@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
 import Image from "next/image";
 import MobileSidebar from "@/components/mobile-sidebar";
 import { Input } from "@/components/ui/input";
@@ -12,19 +11,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-import { LayoutDashboard, Library } from "lucide-react";
-const settinsData = {
-  label: "Dashboard",
-  icon: LayoutDashboard,
-  href: "/dashboard",
-  color: "text-sky-500",
-};
-const alertData = {
-  label: "Mes cours",
-  icon: Library,
-  href: "/cours",
-  color: "text-sky-500",
-};
 const Navbar = async () => {
   return (
     <div className="flex shadow-lg items-center p-4 bg-green-400">
