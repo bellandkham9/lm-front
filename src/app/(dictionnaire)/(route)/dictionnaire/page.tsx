@@ -48,8 +48,8 @@ const page = () => {
                 <Image
                   src="/images/africa_illustration.svg"
                   alt="background image"
-                  width={750}
-                  height={750}
+                  width={700}
+                  height={700}
                 ></Image>
               </div>
             </div>
@@ -88,11 +88,12 @@ const page = () => {
                         <Image
                           src="/images/icons8-add-shopping-cart-30.png"
                           alt=""
-                          width={28}
-                          height={28}
+                          width={20}
+                          height={20}
                         ></Image>
-                        <h4 className="flex text-white text-xs pt-1">
-                          Panier de mots <span>(59)</span>
+                        <h4 className="flex text-white text-xs pt-1 space-x-1">
+                          <span className="space-x-2">Panier de mots</span>
+                          <span>(59)</span>
                         </h4>
                       </Button>
                     </div>
@@ -588,7 +589,6 @@ const page = () => {
             <Button className="bg-orange-400 p-5 text-white rounded-xl shadow-md hover:bg-orange-400">
               <p>Poursuivre une leçons</p>
             </Button>
-
             <div className="mr-36">
               <div className="flex">chat</div>
             </div>

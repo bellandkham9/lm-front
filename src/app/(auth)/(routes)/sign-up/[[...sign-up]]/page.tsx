@@ -190,14 +190,14 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center mt-3">
+      {/* <div className="flex justify-center mt-3">
         <Image
           src="/images/people_talk.svg"
           width={520}
           height={280}
           alt={""}
         />
-      </div>
+      </div> */}
     </>
   );
 }

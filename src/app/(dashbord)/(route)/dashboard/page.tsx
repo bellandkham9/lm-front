@@ -1,9 +1,9 @@
-"use client";
 
 import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 import {
   Accordion,
   AccordionContent,
@@ -51,24 +51,28 @@ const dashboard = () => {
             </div> */}
             <div className="grid grid-cols-1 mt-2 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">
               <div className="flex items-center text-white">
-                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div className="max-w-sm bg-white border border-gray-200 rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700">
                   <div className="p-1">
-                    <div className="flex bg-slate-50">
+                    <div className="flex bg-slate-50 ">
+                      <div className="mt-1 ml-4">
                       <Image
                         alt=""
                         src="/images/communication_120px.png"
-                        width={40}
-                        height={40}
+                        width={25}
+                        height={25}
                       />
-                      <h4 className="mb-2 p-1 text-lg font-bold tracking-tight text-gray-900">
+                      </div>
+                      <div>
+                      <p className="mb-2 p-1 text-lg font-bold tracking-tight text-gray-900">
                         Chat
-                      </h4>
+                      </p>
+                      </div>
                     </div>
-                    <p className="mb-3 text-sm p-3 justify-items-center font-normal text-justify  text-gray-700 dark:text-gray-400">
-                      Here are the biggest enterprise technology acquisitions
+                    <p className="mb-3 text-sm p-3 justify-items-center font-normal text-gray-500">
+                      Here are the biggest enterprise technology
                     </p>
                     <div className="flex justify-items-center justify-center mb-3">
-                      <Button className="bg-green-400 rounded-xl shadow-md hover:bg-orange-400 justify-center">
+                      <Button disabled className="bg-green-400 rounded-xl shadow-md disabled:bg-slate-500 hover:bg-orange-400 justify-center">
                         <p>viens chatter</p>
                       </Button>
                     </div>
@@ -76,24 +80,28 @@ const dashboard = () => {
                 </div>
               </div>
               <div className="flex items-center text-white">
-                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div className="max-w-sm bg-white border border-gray-200 rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700">
                   <div className="p-1">
                     <div className="flex bg-slate-50">
+                      <div className="mt-1 ml-4">
                       <Image
                         alt=""
                         src="/images/video_conference_120px.png"
-                        width={40}
-                        height={40}
+                        width={25}
+                        height={25}
                       />
-                      <h4 className="mb-2 p-1 text-lg font-bold tracking-tight text-gray-900">
+                      </div>
+                      <div>
+                      <p className="mb-2 p-1 text-lg font-bold tracking-tight text-gray-900">
                         Conférence
-                      </h4>
+                      </p>
+                      </div>
                     </div>
-                    <p className="mb-3 text-sm p-3 justify-items-center font-normal text-justify  text-gray-700 dark:text-gray-400">
-                      Here are the biggest enterprise technology acquisitions
+                    <p className="mb-3 text-sm p-3 justify-items-center font-normal  text-gray-500">
+                      Here are the biggest enterprise technology
                     </p>
                     <div className="flex justify-items-center justify-center mb-3">
-                      <Button className="bg-green-400 rounded-xl shadow-md hover:bg-orange-400 justify-center">
+                      <Button disabled className="bg-green-400 rounded-xl shadow-md disabled:bg-slate-500 hover:bg-orange-400 justify-center">
                         <p>Participer</p>
                       </Button>
                     </div>
@@ -101,24 +109,28 @@ const dashboard = () => {
                 </div>
               </div>
               <div className="flex items-center text-white">
-                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div className="max-w-sm bg-white border border-gray-200 rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700">
                   <div className="p-1">
                     <div className="flex bg-slate-50">
+                      <div className="mt-1 ml-4">
                       <Image
                         alt=""
                         src="/images/native_american_chief_120px.png"
-                        width={40}
-                        height={40}
+                        width={25}
+                        height={25}
                       />
-                      <h4 className="mb-2 p-1 text-lg font-bold tracking-tight text-gray-900">
+                      </div>
+                      <div>
+                      <p className="mb-2 p-1 text-lg font-bold tracking-tight text-gray-900">
                         Culture
-                      </h4>
+                      </p>
+                      </div>
                     </div>
-                    <p className="mb-3 text-sm p-3 justify-items-center font-normal text-justify  text-gray-700 dark:text-gray-400">
-                      Here are the biggest enterprise technology acquisitions
+                    <p className="mb-3 text-sm p-3 justify-items-center font-normal  text-gray-500">
+                      Here are the biggest enterprise technology
                     </p>
                     <div className="flex justify-items-center justify-center mb-3">
-                      <Button className="bg-green-400 rounded-xl shadow-md hover:bg-orange-400 justify-center">
+                      <Button disabled className="bg-green-400 rounded-xl shadow-md disabled:bg-slate-500 hover:bg-orange-400 justify-center">
                         <p>Découvrir la culture</p>
                       </Button>
                     </div>
@@ -126,25 +138,29 @@ const dashboard = () => {
                 </div>
               </div>
               <div className="flex items-center text-white">
-                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div className="max-w-sm bg-white border border-gray-200 rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700">
                   <div className="p-1">
-                    <div className="flex bg-slate-50">
-                      <Image
+                    <div className="flex bg-slate-50 p-1">
+                     <div className="mt-1 ml-4">
+                     <Image
                         alt=""
                         src="/images/dictionary_120px.png"
-                        width={40}
-                        height={40}
+                        width={28}
+                        height={28}
                       />
-                      <h4 className="mb-2 p-1 text-lg font-bold tracking-tight text-gray-900">
+                     </div>
+                      <div>
+                      <p className="mb-2 p-1 text-lg font-bold tracking-tight text-gray-900">
                         Dictionnaire
-                      </h4>
+                      </p>
+                      </div>
                     </div>
-                    <p className="mb-3 text-sm p-3 justify-items-center font-normal text-justify  text-gray-700 dark:text-gray-400">
-                      Here are the biggest enterprise technology acquisitions
+                    <p className="mb-3 text-sm p-3 justify-items-center font-normal  text-gray-500">
+                      Here are the biggest enterprise technology
                     </p>
                     <div className="flex justify-items-center justify-center mb-3">
-                      <Link href="/Dictionnaire">
-                        <Button className="bg-green-400 rounded-xl shadow-md hover:bg-orange-400 justify-center">
+                      <Link href="/dictionnaire">
+                        <Button className="bg-green-400 rounded-xl shadow-md  hover:bg-orange-400 justify-center">
                           <p>Découvrie les mots</p>
                         </Button>
                       </Link>
@@ -153,24 +169,28 @@ const dashboard = () => {
                 </div>
               </div>
               <div className="flex items-center text-white">
-                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div className="max-w-sm bg-white border border-gray-200 rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700">
                   <div className="p-1">
                     <div className="flex bg-slate-50">
+                      <div className="mt-1 ml-4">
                       <Image
                         alt=""
                         src="/images/man_reading_a_book_120px.png"
-                        width={40}
-                        height={40}
+                        width={28}
+                        height={28}
                       />
-                      <h4 className="mb-2 p-1 text-lg font-bold tracking-tight text-gray-900">
+                      </div>
+                      <div>
+                      <p className="mb-2 p-1 text-lg font-bold tracking-tight text-gray-900">
                         Formation
-                      </h4>
+                      </p>
+                      </div>
                     </div>
-                    <p className="mb-3 text-sm p-3 justify-items-center font-normal text-justify  text-gray-700 dark:text-gray-400">
-                      Here are the biggest enterprise technology acquisitions
+                    <p className="mb-3 text-sm p-3 justify-items-center font-normal   text-gray-500">
+                      Here are the biggest enterprise technology
                     </p>
                     <div className="flex justify-items-center justify-center mb-3">
-                      <Button className="bg-green-400 rounded-xl shadow-md hover:bg-orange-400 justify-center">
+                      <Button disabled className="bg-green-400 rounded-xl disabled:bg-slate-500 shadow-md hover:bg-orange-400 justify-center">
                         <p>Débuter sa formation</p>
                       </Button>
                     </div>
@@ -178,24 +198,28 @@ const dashboard = () => {
                 </div>
               </div>
               <div className="flex items-center text-white">
-                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div className="max-w-sm bg-white border border-gray-200 rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700">
                   <div className="p-1">
                     <div className="flex bg-slate-50">
+                      <div className="mt-1 ml-4">
                       <Image
                         alt=""
                         src="/images/users_120px.png"
-                        width={40}
-                        height={40}
+                        width={28}
+                        height={28}
                       />
-                      <h4 className="mb-2 p-1 text-lg font-bold tracking-tight text-gray-900">
+                      </div>
+                      <div>
+                      <p className="mb-2 p-1 text-lg font-bold tracking-tight text-gray-900">
                         Forum
-                      </h4>
+                      </p>
+                      </div>
                     </div>
-                    <p className="mb-3 text-sm p-3 justify-items-center font-normal text-justify  text-gray-700 dark:text-gray-400">
-                      Here are the biggest enterprise technology acquisitions
+                    <p className="mb-3 text-sm p-3 justify-items-center font-normal   text-gray-500">
+                      Here are the biggest enterprise technology
                     </p>
                     <div className="flex justify-items-center justify-center mb-3">
-                      <Button className="bg-green-400 rounded-xl shadow-md hover:bg-orange-400 justify-center">
+                      <Button disabled className="bg-green-400 rounded-xl shadow-md disabled:bg-slate-500   hover:bg-orange-400 justify-center">
                         <p>Venez discuter</p>
                       </Button>
                     </div>
@@ -203,26 +227,32 @@ const dashboard = () => {
                 </div>
               </div>
               <div className="flex items-center text-white">
-                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div className="max-w-sm bg-white border border-gray-200 rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700">
                   <div className="p-1">
                     <div className="flex bg-slate-50">
+                      <div className="mt-1 ml-4">
                       <Image
                         alt=""
                         src="/images/language_skill_120px.png"
-                        width={40}
-                        height={40}
+                        width={28}
+                        height={28}
                       />
-                      <h4 className="mb-2 p-1 text-lg font-bold tracking-tight text-gray-900">
+                      </div>
+                      <div>
+                      <p className="mb-2 p-1 text-lg font-bold tracking-tight text-gray-900">
                         Traduction
-                      </h4>
+                      </p>
+                      </div>
                     </div>
-                    <p className="mb-3 text-sm p-3 justify-items-center font-normal text-justify  text-gray-700 dark:text-gray-400">
-                      Here are the biggest enterprise technology acquisitions
+                    <p className="mb-3 text-sm p-3 justify-items-center font-normal   text-gray-500">
+                      Here are the biggest enterprise technology
                     </p>
                     <div className="flex justify-items-center justify-center mb-3">
-                      <Button className="bg-green-400 rounded-xl shadow-md hover:bg-orange-400 justify-center">
+                      <Link href={"/traduction"}>
+                      <Button  className="bg-green-400 rounded-xl shadow-md  hover:bg-orange-400 justify-center">
                         <p>Entrer pour traduire</p>
                       </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -238,7 +268,7 @@ const dashboard = () => {
                   </AccordionTrigger>
                   <AccordionContent className="w-full">
                     <div className="flex items-center text-white">
-                      <div className="w-full bg-white border rounded-b-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                      <div className="w-full bg-white border rounded-b-2xl shadow-md dark:bg-gray-800 dark:border-gray-700">
                         <div className="p-2">
                           <div className="flex justify-between">
                             <p className="mb-2 p-1 text-xs font-bold tracking-tight text-gray-900">
@@ -286,12 +316,12 @@ const dashboard = () => {
                   </AccordionTrigger>
                   <AccordionContent className="w-full">
                     <div className="flex items-center">
-                      <div className="w-full bg-white border shadow-md dark:bg-gray-800 dark:border-gray-700">
-                        <div className="p-1">
-                          <div className="mb-3 rounded-b-3xl">
+                      <div className="w-full rounded-b-2xl bg-white border shadow-md dark:bg-gray-800 dark:border-gray-700">
+                        <div className="p-3">
+                          <div className="mb-3 ">
                             <div className="space-y-3">
                               <p className="flex font-bold">
-                                Point d'expérience (xp) et niveau
+                                Point d'expérience et niveau
                               </p>
                               <p className="flex space-x-1">
                                 <span>
@@ -324,8 +354,8 @@ const dashboard = () => {
                               </p>
                             </div>
                             <div className="flex justify-items-center justify-center mt-3">
-                              <Button className="bg-blue-400 pr-6 pl-6 text-white rounded-xl shadow-md hover:bg-orange-400 justify-center">
-                                <p>EN SAVOIR +</p>
+                              <Button className="bg-blue-400 pr-4 pl-4 text-white rounded-xl shadow-md hover:bg-orange-400 justify-center">
+                                <p className="text-sm">EN SAVOIR +</p>
                               </Button>
                             </div>
                           </div>
@@ -347,7 +377,11 @@ const dashboard = () => {
         <div className="mr-36">
           <div className="flex">
             <div className="flex items-center space-x-2">
- Chat
+              <Button className="shadow-2xl border rounded-full">
+                <Image src="/images/communicate_100px.png" alt="" width={32} height={32}>
+
+                </Image>
+              </Button>
             </div>
           </div>
         </div>

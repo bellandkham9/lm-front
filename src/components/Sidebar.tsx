@@ -5,6 +5,7 @@ import React from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
+  LayoutDashboard,
   Library,
   Heart,
   Camera,
@@ -19,7 +20,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
-
+import dashboard from "@/app/(dashbord)/(route)/dashboard/page";
 
 const DashboardMenu = [
   {
@@ -40,10 +41,15 @@ const DashboardMenu = [
     href: "/Forum",
     color: "text-sky-500",
   },
-
-]
+];
 
 const routes = [
+  {
+    label: "Dashboard",
+    icon: LayoutDashboard,
+    href: "/dashboard",
+    color: "text-sky-500",
+  },
   {
     label: "Mes cours",
     icon: Library,
@@ -89,54 +95,58 @@ const Sidebar = () => {
       <div className="flex-1">
         <Link
           href="/dashboard"
-          className="relative flex items-center justify-center  mb-14 bg-gray-50 p-5"
+          className="relative flex items-center justify-center  mb-14 bg-gray-50 p-5 shadow-md"
         >
           <div className="relative flex w-32 h-16 justify-center items-center">
             <Image fill alt="logo" src="/images/logo_lm.png" />
           </div>
         </Link>
-        <Accordion type="single" collapsible  className="mt-28">
+        <Accordion
+          type="single"
+          collapsible
+          className="mt-28 border-none hover:no-underline"
+        >
           <AccordionItem value="item-1">
             <AccordionTrigger
               className={cn(
-                "flex justify-end p-2 text-sm group w-full shadow-sm font-medium cursor-pointer hover:text-gray-700 no-underline hover:bg-gray-500/10  transition",
+                "flex justify-end p-2 text-sm group w-full font-medium  hover:text-gray-700 no-underline hover:bg-gray-500/10 transition",
                 pathname === "dashbord"
                   ? " text-gray-900 border-r-4 border-green-400"
                   : "text-gray-400"
               )}
             >
-              <div>Dashboard</div>
+              <div>Formation</div>
             </AccordionTrigger>
             <AccordionContent className="w-full">
-            <div className="space-y-1">
-          {DashboardMenu.map((menu) => (
-            <Link
-              href={menu.href}
-              key={menu.href}
-              className={cn(
-                "text-sm group  flex p-2 pr-6 w-full justify-start font-medium cursor-pointer hover:text-gray-700 hover:bg-gray-500/10  transition",
-                pathname === menu.href
-                  ? " text-gray-900 border-r-4 border-green-400"
-                  : "text-gray-400"
-              )}
-            >
-              <div
-                className={cn(
-                  "relative flex items-end text-xs justify-end flex-1",
-                  pathname === menu.href
-                    ? " border-green-400"
-                    : "text-gray-400"
-                )}
-              >
-                {menu.label}
+              <div className="space-y-1">
+                {DashboardMenu.map((menu) => (
+                  <Link
+                    href={menu.href}
+                    key={menu.href}
+                    className={cn(
+                      "text-sm group  flex p-2 pr-6 w-full justify-start font-medium cursor-pointer hover:text-gray-700 hover:bg-gray-500/10  transition",
+                      pathname === menu.href
+                        ? " text-gray-900 border-r-4 border-green-400"
+                        : "text-gray-400"
+                    )}
+                  >
+                    <div
+                      className={cn(
+                        "relative flex items-end text-xs justify-end flex-1",
+                        pathname === menu.href
+                          ? " border-green-400"
+                          : "text-gray-400"
+                      )}
+                    >
+                      {menu.label}
+                    </div>
+                  </Link>
+                ))}
               </div>
-            </Link>
-          ))}
-        </div>
             </AccordionContent>
           </AccordionItem>
+          
         </Accordion>
-
         <div className="space-y-1">
           {routes.map((route) => (
             <Link
@@ -164,7 +174,7 @@ const Sidebar = () => {
         </div>
         <Link
           href="/dashboard"
-          className="relative flex items-center justify-center  mt-32  bg-gray-50 p-5 mb-0"
+          className="relative flex items-center justify-center  mt-24 shadow-inner  bg-gray-50 p-5 mb-0"
         >
           <div className="relative flex w-20 h-16 justify-center items-center">
             <Image fill alt="logo" src="/images/studying.png" />

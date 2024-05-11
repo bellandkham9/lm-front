@@ -6,7 +6,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import {UserPlus } from "lucide-react";
-
+import BodyLanding from "@/components/bodyLanding"
 
 const route = {
   label: "Se connecter",
@@ -42,7 +42,7 @@ const HeaderLanding = () => {
       {/* <div className="hidden sm:flex justify-items-end justify-end relative">
         <div className="relative flex w-4/5 h-2 bg-green-400"></div>
       </div> */}
-      <div className="flex justify-between bg-scrol  w-full h-20  text-white shadow-lg fixed  nav">
+      <div className="flex justify-between bg-scrol  w-full h-20  bg-white text-white shadow-lg fixed  nav">
         <div>
           {/* <h1 className="text-5xl font-signature ml-2"><a className="link-underline hover:transition ease-in-out delay-150 hover:underline hover:decoration-solid" href="">Logo</a></h1> */}
           <h1 className="text-5xl font-signature ml-2">
@@ -112,15 +112,16 @@ const HeaderLanding = () => {
       </div>
       <div>
       <div className="absolute -z-10 inset-0 opacity-65">
-          <Image
+          {/* <Image
             src="/images/africa_illustration.svg"
             alt="background image"
             fill
-          />
+          /> */}
         </div>
-        <div className="p-40">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis beatae vitae.</p>
+        <div className="mt-5 pt-6">
+              <BodyLanding/>
         </div>
+        
       </div>
     </>
   );

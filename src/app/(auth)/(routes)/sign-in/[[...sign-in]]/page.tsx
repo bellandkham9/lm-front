@@ -11,6 +11,16 @@ export default function Page() {
   return (
     <>
       <div className="flex justify-center">
+      <div className="absolute -z-40 inset-0 opacity-80">
+          <div className="flex relative pl-36 justify-center">
+            <Image
+              src="/images/africa_illustration.svg"
+              alt="background image"
+              width={650}
+              height={650}
+            ></Image>
+          </div>
+        </div>
         <div className="flex lg:w-1/2 justify-center py-1 mt-5 shadow-xl rounded-r-x">
           <div className="relative hidden lg:flex items-center justify-center w-1/2 rounded-l-xl shadow-lg">
             <div className="w-60 h-60 bg-gradient-to-tr from-orange-600 to-orange-300 rounded-full animate-spin "></div>
@@ -89,12 +99,14 @@ export default function Page() {
                   </div>
                 </div>
                 <div>
+                  <Link href="/dashboard">
                   <button
                     type="submit"
                     className="flex w-full justify-center rounded-md bg-green-400 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-lg hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
-                    Conexion
+                    Connexion
                   </button>
+                  </Link>
                 </div>
 
                 <div>
@@ -138,14 +150,14 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center mt-3">
+     {/*  <div className="flex justify-center mt-3">
         <Image
           src="/images/people_talk.svg"
           width={520}
           height={280}
           alt={""}
         />
-      </div>
+      </div> */}
     </>
   );
 }
