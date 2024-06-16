@@ -4,6 +4,9 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+
+
+
 import {
   Accordion,
   AccordionContent,
@@ -370,7 +373,7 @@ const dashboard = () => {
         </div>
       </div>
       <div className="flex justify-between pl-6 pr-6">
-        <Button className="bg-orange-400 p-5 text-white rounded-xl shadow-md hover:bg-orange-400">
+        <Button  className="bg-orange-400 p-5 text-white rounded-xl shadow-md hover:bg-orange-400">
           <p>Retour aux leçons</p>
         </Button>
 

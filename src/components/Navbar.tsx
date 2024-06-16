@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/tooltip";
 import Profile from "@/components/Profile";
 
-const Navbar = async () => {
+const Navbar = () => {
   return (
     <div className="flex shadow-lg items-center p-4 bg-green-400">
       <MobileSidebar />

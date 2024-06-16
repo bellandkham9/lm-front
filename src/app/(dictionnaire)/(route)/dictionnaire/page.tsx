@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
@@ -6,6 +6,7 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+
 import Link from "next/link";
 import {
   Dialog,
@@ -32,8 +33,34 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { useEffect } from "react";
+import $ from "jquery";
 
 const page = () => {
+  useEffect(() => {
+    // Effect pour charger les données
+    $.ajax({
+      url: "https://lm1-paxp.onrender.com/dictionnaire/translate/?source_lang=fr&target_lang=ln&text='je mange le riz'",
+      method: "GET",
+      success: (data) => {
+        console.log(data);
+      },
+      error: (error) => {
+        console.error("Erreur:", error);
+      },
+    });
+
+    // Effect pour gérer le clic sur #mon-element
+    $("#mon-element").on("click", () => {
+      alert("Élément cliqué !");
+    });
+
+    // Nettoyage pour éviter les fuites de mémoire
+    return () => {
+      $("#mon-element").off("click");
+    };
+  }, []); // Le tableau vide indique que cet effet s'exécute une seule fois à l'initialisation
+
   return (
     <div className="h-full relative">
       <div className="hidden h-full md:flex md:w-52 md:flex-col md:fixed md:inset-y-0 z-[80]">
@@ -194,10 +221,10 @@ const page = () => {
                               <DialogTrigger asChild>
                                 <Button className="flex text-start mt-2">
                                   <h2 className="font-bold">
-                                    <h1>Malamu</h1>
+                                    Bolingo(Amour)
                                     <p className="hidden sm:block text-gray-400 mb-4 text-xs">
-                                      Lorem ipsum dolor sit amet consectetur
-                                      adipisicing elit. Et ab veniam ad.
+                                      Bolingo na gai pona yo esali makasi (Mon
+                                      amour pour toi est très fort).
                                     </p>
                                   </h2>
                                 </Button>
@@ -326,10 +353,10 @@ const page = () => {
                             </Button>
                             <Button className="flex text-start mt-2">
                               <h2 className="font-bold">
-                                <h1>Malamu</h1>
+                                <h1>Mosala(Travail)</h1>
                                 <p className="hidden sm:block text-gray-400 mb-4 text-xs">
-                                  Lorem ipsum dolor sit amet consectetur
-                                  adipisicing elit. Et ab veniam ad.
+                                  Nasepeli na mosala na ngai. (Je suis content
+                                  de mon travail.).
                                 </p>
                               </h2>
                             </Button>
@@ -357,10 +384,10 @@ const page = () => {
                             </Button>
                             <Button className="flex text-start mt-2">
                               <h2 className="font-bold">
-                                <h1>Malamu</h1>
+                                <h1>Mokonzi(Chef)</h1>
                                 <p className="hidden sm:block text-gray-400 mb-4 text-xs">
-                                  Lorem ipsum dolor sit amet consectetur
-                                  adipisicing elit. Et ab veniam ad.
+                                  Mokonzi ayalaka bato na yo. (Le chef dirige
+                                  son peuple.)
                                 </p>
                               </h2>
                             </Button>
@@ -388,10 +415,10 @@ const page = () => {
                             </Button>
                             <Button className="flex text-start mt-2">
                               <h2 className="font-bold">
-                                <h1>Malamu</h1>
+                                <h1>Esengo(Joie)</h1>
                                 <p className="hidden sm:block text-gray-400 mb-4 text-xs">
-                                  Lorem ipsum dolor sit amet consectetur
-                                  adipisicing elit. Et ab veniam ad.
+                                  Nazali na esengo mingi. (Je suis très
+                                  heureux.).
                                 </p>
                               </h2>
                             </Button>
@@ -419,10 +446,10 @@ const page = () => {
                             </Button>
                             <Button className="flex text-start mt-2">
                               <h2 className="font-bold">
-                                <h1>Malamu</h1>
+                                <h1>Nzambe(Dieu)</h1>
                                 <p className="hidden sm:block text-gray-400 mb-4 text-xs">
-                                  Lorem ipsum dolor sit amet consectetur
-                                  adipisicing elit. Et ab veniam ad.
+                                  Nzambe apesa bolingo na ye na biso. (Dieu nous
+                                  aime.)
                                 </p>
                               </h2>
                             </Button>
@@ -436,6 +463,9 @@ const page = () => {
                                 height={16}
                               ></Image>
                             </Button>
+                          </div>
+                          <div>
+                            <h1 id="mon-element">Clique-moi</h1>
                           </div>
                         </div>
                       </div>

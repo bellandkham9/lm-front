@@ -18,7 +18,7 @@ const  SelectLangue=()=> {
       </SelectTrigger>
       <SelectContent className="bg-white">
         <SelectGroup>
-          <SelectLabel>Fruits</SelectLabel>
+          <SelectLabel>Langue</SelectLabel>
           <SelectItem value="apple">Apple</SelectItem>
           <SelectItem value="banana">Banana</SelectItem>
           <SelectItem value="blueberry">Blueberry</SelectItem>
