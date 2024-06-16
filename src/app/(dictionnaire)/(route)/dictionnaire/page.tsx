@@ -33,34 +33,8 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { useEffect } from "react";
-import $ from "jquery";
 
 const page = () => {
-  useEffect(() => {
-    // Effect pour charger les données
-    $.ajax({
-      url: "https://lm1-paxp.onrender.com/dictionnaire/translate/?source_lang=fr&target_lang=ln&text='je mange le riz'",
-      method: "GET",
-      success: (data) => {
-        console.log(data);
-      },
-      error: (error) => {
-        console.error("Erreur:", error);
-      },
-    });
-
-    // Effect pour gérer le clic sur #mon-element
-    $("#mon-element").on("click", () => {
-      alert("Élément cliqué !");
-    });
-
-    // Nettoyage pour éviter les fuites de mémoire
-    return () => {
-      $("#mon-element").off("click");
-    };
-  }, []); // Le tableau vide indique que cet effet s'exécute une seule fois à l'initialisation
-
   return (
     <div className="h-full relative">
       <div className="hidden h-full md:flex md:w-52 md:flex-col md:fixed md:inset-y-0 z-[80]">
