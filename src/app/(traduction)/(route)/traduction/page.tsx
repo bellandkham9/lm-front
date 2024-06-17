@@ -90,7 +90,9 @@ const Page = () => {
                             <SelectGroup>
                               <SelectItem value="fr">Français</SelectItem>
                               <SelectItem value="en">Anglais</SelectItem>
-                              <SelectItem value="es">Espagnol</SelectItem>
+                              <SelectItem value="ln">Lingala</SelectItem>
+                              <SelectItem value="ha">Haoussa</SelectItem>
+                              <SelectItem value="yo">Yoruba</SelectItem>
                               {/* Ajoutez d'autres options ici */}
                             </SelectGroup>
                           </SelectContent>
@@ -115,8 +117,11 @@ const Page = () => {
                           <SelectContent className="bg-white">
                             <SelectGroup>
                               <SelectLabel>Langue</SelectLabel>
+                              <SelectItem value="fr">Français</SelectItem>
+                              <SelectItem value="en">Anglais</SelectItem>
                               <SelectItem value="ln">Lingala</SelectItem>
-                              <SelectItem value="ha">haousa</SelectItem>
+                              <SelectItem value="ha">Haoussa</SelectItem>
+                              <SelectItem value="yo">Yoruba</SelectItem>
                               {/* Ajoutez d'autres options ici */}
                             </SelectGroup>
                           </SelectContent>
